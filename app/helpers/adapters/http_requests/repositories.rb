@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'dry/monads'
+require "dry/monads"
 
 module Adapters
   module HttpRequests
     class Repositories < Dry::Struct
       include Dry::Monads[:result]
 
-      URL = 'https://api.github.com/search/repositories?q='
+      URL = "https://api.github.com/search/repositories?q="
 
       def self.search(params)
         new.search(params)
@@ -20,11 +20,11 @@ module Adapters
       private
 
       def request(params)
-        url      = URL + params
+        url = URL + params
         response = conn.get(url)
         return Success(response.body) if response.status == 200
 
-        Failure('Unexpected error.')
+        Failure("Unexpected error.")
       end
 
       def conn
