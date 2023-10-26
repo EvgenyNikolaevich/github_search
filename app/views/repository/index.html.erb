@@ -18,7 +18,7 @@
           <td><%= repository['name'] %></td>
           <td><%= repository['full_name'] %></td>
           <td><%= repository['description'] %></td>
-          <td><%= repository['html_url'] %></td>
+          <td><%= link_to repository['html_url'], repository['html_url']%></a></td>
         </tr>
       <% end %>
     </tbody>

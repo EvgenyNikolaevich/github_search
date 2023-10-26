@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class RepositoryController < ApplicationController
-  def new; end
+  def new
+    render 'new', locals: { search: '' }
+  end
 
   def index
     result = Adapters::HttpRequests::Repositories.search(search_param.fetch(:search))
