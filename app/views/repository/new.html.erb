@@ -1,0 +1,5 @@
+<%= form_with url: repository_index_path, method: :get do |form| %>
+  <%= form.label :search, "Search for:" %>
+  <%= form.text_field :search, value: search %>
+  <%= form.submit "Search" %>
+<% end %>
