@@ -1,0 +1,17 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Layout/LineLength:
+  Max: 120
+
+Documentation:
+  Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - 'spec/requests/**/*.rb'
+
+RSpec/SpecFilePathFormat:
+  Exclude:
+    - 'spec/requests/**/*.rb'

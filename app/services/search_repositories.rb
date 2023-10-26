@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "dry/monads"
+require 'dry/monads'
 
 class SearchRepositories < Dry::Struct
   include Dry::Monads[:result]
