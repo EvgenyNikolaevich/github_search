@@ -16,7 +16,7 @@ Run the project:
 rails s
 ```
 
-Go to the `localhost:3000/repository/new` and check the result.
+Go to the [search page](localhost:3000/repository/new) and check the result.
 
 Possible plans:
 
